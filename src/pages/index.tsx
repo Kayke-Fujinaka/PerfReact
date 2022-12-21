@@ -16,8 +16,6 @@ export default function Home() {
     return setResult(data);
   }
 
-  console.log(result);
-
   return (
     <div>
       <h1>Pesquisar</h1>
