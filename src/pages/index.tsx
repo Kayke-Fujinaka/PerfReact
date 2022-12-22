@@ -4,11 +4,12 @@ import SearchResult from "../components/SearchResult";
 interface ProductResponse {
   id: number;
   price: number;
+  priceFormatted: string;
   title: string;
 }
 interface Results {
   totalPrice: number;
-  data: ProductResponse[];
+  data: any[];
 }
 
 export default function Home() {
@@ -33,7 +34,7 @@ export default function Home() {
       currency: "BRL",
     });
 
-    const products = data.map((product: ProductResponse) => {
+    const products = data.map((product: any) => {
       return {
         ...product,
         priceFormatted: formatter.format(product.price),
